@@ -5,7 +5,6 @@ import com.example.hexagonal.application.port.out.MemberJoinOutputPort;
 import com.example.hexagonal.domain.Member;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -26,10 +25,12 @@ public class MemberRepository implements MemberFindOutputPort, MemberJoinOutputP
         .pw(pw)
         .build();
 
-    try {
-      dataJpaMemberRepository.save(member);
-    } catch (DataIntegrityViolationException e) {
-      throw new DataIntegrityViolationException("userId 중복");
-    }
+    dataJpaMemberRepository.findByUserId(userId)
+        .ifPresent(m -> {
+          throw new IllegalStateException("UserId: " + m.getUserId() + " 는 이미 존재하는 회원입니다.");
+        });
+
+    dataJpaMemberRepository.save(member);
   }
+
 }
