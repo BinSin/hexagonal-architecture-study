@@ -7,14 +7,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class RegisterMemberInputPort implements JoinMemberUseCase {
 
   private final MemberJoinOutputPort memberJoinOutputPort;
 
   @Override
-  @Transactional
   public void join(String userId, String pw) {
     memberJoinOutputPort.join(userId, pw);
   }
+
 }

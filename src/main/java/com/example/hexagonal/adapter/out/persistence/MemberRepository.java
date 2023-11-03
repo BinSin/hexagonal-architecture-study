@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 public class MemberRepository implements MemberFindOutputPort, MemberJoinOutputPort {
 
-  private final DataJpaMemberRepository dataJpaMemberRepository;
+  private final MemberJpaRepository dataJpaMemberRepository;
 
   @Override
   public Optional<Member> findOne(String userId) {
