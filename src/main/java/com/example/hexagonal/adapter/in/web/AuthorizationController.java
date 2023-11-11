@@ -4,15 +4,11 @@ import com.example.hexagonal.adapter.out.persistence.MemberJoinDto;
 import com.example.hexagonal.application.usecases.FindOneMemberUseCase;
 import com.example.hexagonal.application.usecases.JoinMemberUseCase;
 import com.example.hexagonal.domain.Member;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/auth")
@@ -26,7 +22,7 @@ public class AuthorizationController {
   public ResponseEntity<String> join(@RequestParam String userId) {
     Optional<Member> member = findOneMemberUseCase.findOne(userId);
     if (member.isEmpty()) {
-      return ResponseEntity.ok("존재하지 않는 userId 입니다.");
+      return ResponseEntity.ok("존재하지 않는 userId 입니다.ab");
     }
 
     return ResponseEntity.ok(member.get().toString());
