@@ -22,7 +22,7 @@ public class AuthorizationController {
   public ResponseEntity<String> join(@RequestParam String userId) {
     Optional<Member> member = findOneMemberUseCase.findOne(userId);
     if (member.isEmpty()) {
-      return ResponseEntity.ok("존재하지 않는 userId 입니다.a");
+      return ResponseEntity.ok("존재하지 않는 userId 입니다.ab");
     }
 
     return ResponseEntity.ok(member.get().toString());
