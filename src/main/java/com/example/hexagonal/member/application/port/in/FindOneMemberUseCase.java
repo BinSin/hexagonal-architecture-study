@@ -1,6 +1,6 @@
-package com.example.hexagonal.application.usecases;
+package com.example.hexagonal.member.application.port.in;
 
-import com.example.hexagonal.domain.Member;
+import com.example.hexagonal.member.domain.Member;
 import java.util.Optional;
 
 public interface FindOneMemberUseCase {

@@ -1,4 +1,4 @@
-package com.example.hexagonal.application.usecases;
+package com.example.hexagonal.member.application.port.in;
 
 public interface JoinMemberUseCase {
 

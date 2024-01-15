@@ -1,4 +1,4 @@
-package com.example.hexagonal.application.port.out;
+package com.example.hexagonal.member.application.port.out;
 
 public interface MemberJoinOutputPort {
 

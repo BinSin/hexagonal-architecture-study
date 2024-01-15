@@ -1,8 +1,8 @@
 package com.example.hexagonal.adapter.out.persistence;
 
-import com.example.hexagonal.application.port.out.MemberFindOutputPort;
-import com.example.hexagonal.application.port.out.MemberJoinOutputPort;
-import com.example.hexagonal.domain.Member;
+import com.example.hexagonal.member.application.port.out.MemberFindOutputPort;
+import com.example.hexagonal.member.application.port.out.MemberJoinOutputPort;
+import com.example.hexagonal.member.domain.Member;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

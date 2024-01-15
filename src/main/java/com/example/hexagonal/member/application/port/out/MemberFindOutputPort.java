@@ -1,6 +1,6 @@
-package com.example.hexagonal.application.port.out;
+package com.example.hexagonal.member.application.port.out;
 
-import com.example.hexagonal.domain.Member;
+import com.example.hexagonal.member.domain.Member;
 import java.util.Optional;
 
 public interface MemberFindOutputPort {

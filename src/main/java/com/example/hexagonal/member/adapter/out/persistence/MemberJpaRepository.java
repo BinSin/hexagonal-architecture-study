@@ -1,6 +1,6 @@
 package com.example.hexagonal.adapter.out.persistence;
 
-import com.example.hexagonal.domain.Member;
+import com.example.hexagonal.member.domain.Member;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

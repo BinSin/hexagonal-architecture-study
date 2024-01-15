@@ -1,7 +1,7 @@
-package com.example.hexagonal.application.port.in;
+package com.example.hexagonal.member.application;
 
-import com.example.hexagonal.application.port.out.MemberJoinOutputPort;
-import com.example.hexagonal.application.usecases.JoinMemberUseCase;
+import com.example.hexagonal.member.application.port.in.JoinMemberUseCase;
+import com.example.hexagonal.member.application.port.out.MemberJoinOutputPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class RegisterMemberInputPort implements JoinMemberUseCase {
+public class RegisterMemberInputService implements JoinMemberUseCase {
 
   private final MemberJoinOutputPort memberJoinOutputPort;
 
