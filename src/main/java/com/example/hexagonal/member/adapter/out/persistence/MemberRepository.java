@@ -1,4 +1,4 @@
-package com.example.hexagonal.adapter.out.persistence;
+package com.example.hexagonal.member.adapter.out.persistence;
 
 import com.example.hexagonal.member.application.port.out.MemberFindOutputPort;
 import com.example.hexagonal.member.application.port.out.MemberJoinOutputPort;
